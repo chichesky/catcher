@@ -1,0 +1,38 @@
+:root {
+  /*1st palete*/
+  --coldWhite: #f7f7f7;
+  --freshGreen: #cceabb;
+  --mintFreshGreen: #bdebd4;
+  --niceBlack: #3f3f44;
+  --roseOrange: #fdcb9e;
+}
+
+body {
+  display: block;
+  margin:50px;
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+div {
+  height: 25px;
+  width: 25px;
+  float:left;
+  margin:0;
+  padding: 0;
+}
+
+.path {
+    background-color:var(--mintFreshGreen);
+}
+
+.character {
+  background-color: var(--niceBlack) !important;
+}
+
+.escapePoint {
+  background-color: var(--roseOrange) !important;
+}
