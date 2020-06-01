@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Chichesky| Göktuğ Çiçek">
+    <title>Catcher v0.4</title>
+
+    <link rel="stylesheet" href="catcher04.css">
+  </head>
+  <body>
+    <content></content>
+      <button>AutoMove</button>
+      <button>Re-Create</button>
+  </body>
+
+  <script src="catcher04_mapCreator.js"></script>
+  <script src="catcher04_movement.js"></script>
+  <script src="catcher04_autoMove.js"></script>
+
+  <script>
+    createMap();
+    const autoBtn=document.querySelectorAll('button')[0];
+    autoBtn.addEventListener('click',automatic);
+    automatic();
+
+    document.querySelectorAll('button')[1].addEventListener('click',reCreateMap);
+  </script>
+</html>

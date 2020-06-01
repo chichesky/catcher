@@ -1,0 +1,69 @@
+:root {
+  --darker: #512b58;
+  --dark: #2a7886;
+  --mid: #79bac1;
+  --light: #f1f3f4;
+
+  --coldWhite: #f7f7f7;
+  --freshGreen: #cceabb;
+  --mintFreshGreen: #bdebd4;
+  --niceBlack: #3f3f44;
+  --roseOrange: #fdcb9e;
+
+  --darker2: #888888;
+  --dark2: #f0f0f0;
+  --mid2: #ffffff;
+  --light2: #ffe8df;
+
+  --darkerP:#7d5a5a;
+  --darkP:#f1d1d1;
+  --midP:#f3e1e1;
+  --lightP:#faf2f2;
+}
+html {
+  align-items: center;
+}
+
+body {
+  margin:0;
+  padding: 0;
+
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin-left: 100px;
+}
+
+content {
+  display: block;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+div {
+  height: 25px;
+  width: 25px;
+  float:left;
+  margin:0;
+  padding: 0;
+}
+
+.path {
+    background-color:var(--coldWhite);
+}
+
+.character {
+  background-color: var(--niceBlack);
+}
+
+.escape {
+  background-color: var(--mintFreshGreen);
+}
+
+.block {
+  background-color: var(--darkP);
+}
