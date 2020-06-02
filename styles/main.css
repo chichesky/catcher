@@ -1,64 +1,3 @@
-body {
-  background-color:var(--mid2);
-  color: var(--niceBlack);
-  margin: 0;
-  padding: 0;
-
-  text-align: center;
-  align-items: center;
-}
-
-h1 {
-  color: var(--darkerP);
-  font-size: 72px;
-  margin-bottom: 0;
-}
-h3 {
-
-  background-color:var(--darkP);
-  margin-top:0;
-}
-h3 a {
-  color:var(--mid2);
-  text-decoration: none;
-}
-
-h3 a:hover {
-  color:var(--darkerP);
-}
-
-p {
-  display: inline-block;
-  max-width: 600px;
-}
-
-p a {
-  color: var(--darkerP);
-  background-color: var(--light2);
-
-}
-
-p a:hover {
-  color: var(--light2);
-  background-color: var(--darkerP);
-}
-
-iframe {
-  outline-style: inset;
-  outline-width: thick;
-  outline-color: var(--darkP);
-  border-color: var(--darkP);
-  width: 600px;
-  height: 600px;
-  margin: 10px;
-}
-
-footer {
-  background-color:var(--darkP);
-  color:var(--mid2);
-}
-
-
 :root {
   --darker: #512b58;
   --dark: #2a7886;
@@ -68,7 +7,7 @@ footer {
   --coldWhite: #f7f7f7;
   --freshGreen: #cceabb;
   --mintFreshGreen: #bdebd4;
-  --niceBlack: #3f3f44;
+
   --roseOrange: #fdcb9e;
 
   --darker2: #888888;
@@ -76,9 +15,220 @@ footer {
   --mid2: #ffffff;
   --light2: #ffe8df;
 
-  --darkerP:#7d5a5a;
   --darkP:#f1d1d1;
-  --midP:#f3e1e1;
   --lightP:#faf2f2;
+}
 
+:root {
+  --bgColor: #f0f0f0;
+  --niceBlack: #3f3f44;
+
+  --headerPink: #7d5a5a;
+  --chicheskyPink: #f3e1e1;
+}
+
+@font-face {
+  font-family: headerFont;
+  src: url(../assets/fonts/Playball/Playball-Regular.ttf);
+}
+@font-face {
+  font-family: h2Font;
+  src: url(../assets/fonts/Poiret_One/PoiretOne-Regular.ttf);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--niceBlack);
+  margin: inherit;
+  padding: inherit;
+
+  align-items: center;
+  align-content: center;
+}
+
+header {
+  width: 100vw;
+  height: 20vh;
+  text-align: center;
+
+  margin:inherit;
+  padding: inherit;
+}
+
+h1 {
+  color: var(--headerPink);
+  font-size: 7vh;
+  font-family: headerFont;
+
+  margin-top: 3.5vw;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+h2{
+  width: 100vw;
+  background-color: var(--chicheskyPink);
+
+  font-family: h2Font;
+  font-size: 2vh;
+  color: var(--darker2);
+
+  margin: 0;
+}
+
+nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: block;
+  width: 72vw;
+  height: 6vh;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: h2Font;
+  color: var(--niceBlack);
+}
+
+nav .dropbox {
+  display: inline-block;
+  float: left;
+  width: 12vw;
+  height: inherit;
+
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+nav .selected {
+  background-color: var(--chicheskyPink);
+  color: var(--darker2);
+  transition-duration: 1.5s;
+}
+
+nav .versionSelected {
+  background-color: var(--headerPink);
+  color: var(--chicheskyPink);
+  transition-duration: 1.5s;
+}
+
+nav .dropbox p {
+  font-size:1.7vh;
+  margin-top:1vh;
+  margin-bottom: 0;
+}
+
+nav .dropbox-content {
+  position: absolute;
+  z-index: 1;
+  margin:0;
+  padding-left: 0;
+  padding-top: 0.5vh;
+  width: inherit;
+  background-color: var(--chicheskyPink);
+  display:none;
+}
+
+nav .dropbox-content .closeBtn {
+  background-color: var(--headerPink);
+  color: var(--chicheskyPink);
+  width: 3vw;
+  height: 3vw;
+  font-size: 3vw;
+  padding: 0;
+  border-radius: 100%;
+  position: fixed;
+  margin-left: 10vw;
+  top: 13vh;
+  opacity: 0.5;
+}
+
+nav .dropbox-content .nonVisible {
+  display: none;
+}
+
+@keyframes menuOpenUp {
+  from {opacity: 0;}
+  to { opacity: 1;}
+}
+
+nav .visible {
+  display:block;
+  animation-name: menuOpenUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+nav a {
+  font-size: 1.5vh;
+  color: var(--niceBlack);
+  text-decoration: none;
+  display:block;
+  padding-bottom: 0.5vh;
+  transition: 0.5s;
+}
+
+nav .dropbox-content a:hover {
+  background-color: var(--headerPink);
+  color: var(--chicheskyPink);
+}
+
+.clicked {}
+
+
+
+iframe {
+  display: block;
+  outline-width: 5px;
+  outline-style: inset;
+  outline-color: var(--chicheskyPink);
+  border: 1px solid var(--chicheskyPink);
+
+  width: 753px;
+  height: 753px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+footer {
+  display: block;
+  position: fixed;
+  bottom:0;
+  width: 100vw;
+  text-align: center;
+  background-color: var(--chicheskyPink);
+  font-family: h2Font;
+  font-size: 1.3vh;
+  color: var(--niceBlack);
+}
+
+
+
+
+warning {
+  display:none;
+}
+@media only screen and (max-width:800px) {
+  warning {
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    color: green;
+    font-size: 7vh;
+  }
+  body {
+    overflow: hidden;
+  }
 }

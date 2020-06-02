@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Chichesky| Göktuğ Çiçek">
+    <title>Catcher v0.5</title>
+
+    <link rel="stylesheet" href="catcher05.css">
+  </head>
+  <body>
+    <h2>Level: <span></span></h2>
+
+    <content></content>
+      <button class="first">AutoMove</button>
+      <select>
+        <option value="10">Level: 10</option>
+        <option value="20">Level: 20</option>
+        <option value="30">Level: 30</option>
+        <option value="40">Level: 40</option>
+        <option value="53">Level: 53</option>
+        <option value="61">Level: 61</option>
+        <option value="random">Random</option>
+      </select>
+      <button class="second">Re-Create</button>
+  </body>
+
+  <script src="catcher05_mapCreator.js"></script>
+  <script src="catcher05_movement.js"></script>
+  <script src="catcher05_autoMove.js"></script>
+
+  <script>
+    createMap();
+    const autoBtn=document.querySelectorAll('button')[0];
+    const levelSelect = document.querySelector('select');
+    levelSelect.addEventListener('change',levelChange);
+    autoBtn.addEventListener('click',automatic);
+    document.querySelectorAll('button')[1].addEventListener('click',reCreateMapBtn);
+  </script>
+</html>
