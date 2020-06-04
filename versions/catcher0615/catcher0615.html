@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Chichesky| Göktuğ Çiçek">
+    <title>Catcher v0.615</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/main0615.css">
+    <link rel="stylesheet" type="text/css" href="styles/gameStyle0615.css">
+  </head>
+  <body>
+    <main>
+      <content>
+      </content>
+      <form>
+        <button type="button" id="createMap">Create Map</button>
+        <div class="settings">
+          <p id="settingHeader">Walls settings:</p>
+            <label for="random">Random</label>
+              <input type="radio" id="random" name="wallSelection"
+                    value="random" checked>
+            <label for="constant">Constant</label>
+              <input type="radio" id="constant" name="wallSelection"
+                    value="constant">
+            <label for="disableWall">Disable</label>
+              <input type="radio" id="disableWall" name="wallSelection" value="disableWall">
+            <label for="wallNumber">Random Numbers (max:200):</label> <br/>
+              <p>Max:</p>
+              <input type="number" id="maxWallNumber" name="randomWallNumber"
+                    size="3" min="1" max="200" value="80">
+              <p>Min:</p>
+              <input type="number" id="minWallNumber" name="randomWallNumber"
+                     size="3" min="0" max="200" value="0">
+
+            <label for="wallNumber">Number (max:200):</label>
+              <input type="number" id="wallNumber" name="wallNumber"
+                     min="0" max="200" size="3" value="80">
+        </div>
+        <div class="settings">
+          <div class="backgroundColorMenu colorsSelection" name="bgColor">
+            <p>Background Color</p>
+            <div class="option" name="color1"></div>
+            <div class="option" name="color2"></div>
+            <div class="option" name="color3"></div>
+            <div class="option" name="color4"></div>
+            <div class="option" name="color5"></div>
+            <div class="option" name="color6"></div>
+            <div class="option" name="color7"></div>
+            <div class="option" name="color8"></div>
+            <div class="option" name="color9"></div>
+            <div class="option" name="color10"></div>
+          </div>
+          <div class="wallColorMenu colorsSelection" name="wallColor">
+            <p>Walls Colour</p>
+            <div class="option" name="color1"></div>
+            <div class="option" name="color2"></div>
+            <div class="option" name="color3"></div>
+            <div class="option" name="color4"></div>
+            <div class="option" name="color5"></div>
+            <div class="option" name="color6"></div>
+            <div class="option" name="color7"></div>
+            <div class="option" name="color8"></div>
+            <div class="option" name="color9"></div>
+            <div class="option" name="color10"></div>
+          </div>
+          <div class="rivalColorMenu colorsSelection" name="rivalColor">
+            <p>Rival Colour</p>
+            <div class="option" name="color1"></div>
+            <div class="option" name="color2"></div>
+            <div class="option" name="color3"></div>
+            <div class="option" name="color4"></div>
+            <div class="option" name="color5"></div>
+            <div class="option" name="color6"></div>
+            <div class="option" name="color7"></div>
+            <div class="option" name="color8"></div>
+            <div class="option" name="color9"></div>
+            <div class="option" name="color10"></div>
+          </div>
+          <div class="enemyColorMenu colorsSelection" name="enemyColor">
+            <p>Enemy Colour</p>
+            <div class="option" name="color1"></div>
+            <div class="option" name="color2"></div>
+            <div class="option" name="color3"></div>
+            <div class="option" name="color4"></div>
+            <div class="option" name="color5"></div>
+            <div class="option" name="color6"></div>
+            <div class="option" name="color7"></div>
+            <div class="option" name="color8"></div>
+            <div class="option" name="color9"></div>
+            <div class="option" name="color10"></div>
+          </div>
+          <div class="targetColorMenu colorsSelection" name="targetColor">
+            <p>Target Colour</p>
+            <div class="option" name="color1"></div>
+            <div class="option" name="color2"></div>
+            <div class="option" name="color3"></div>
+            <div class="option" name="color4"></div>
+            <div class="option" name="color5"></div>
+            <div class="option" name="color6"></div>
+            <div class="option" name="color7"></div>
+            <div class="option" name="color8"></div>
+            <div class="option" name="color9"></div>
+            <div class="option" name="color10"></div>
+          </div>
+          <div class="playerSettings">
+          <p>Player Properies: </p>
+            <div class="characterColorMenu colorsSelection" name="playerColor">
+              <p>Colour</p>
+              <div class="option" name="color1"></div>
+              <div class="option" name="color2"></div>
+              <div class="option" name="color3"></div>
+              <div class="option" name="color4"></div>
+              <div class="option" name="color5"></div>
+              <div class="option" name="color6"></div>
+              <div class="option" name="color7"></div>
+              <div class="option" name="color8"></div>
+              <div class="option" name="color9"></div>
+              <div class="option" name="color10"></div>
+            </div>
+          </div>
+        </div>
+        <div class="settings">
+        </div>
+        <div class="settings">
+        </div>
+      </form>
+    </main>
+
+    <div class="colorAlert" id="colorAlert">
+      <p> You cannot choose a colour used. <br/>
+        <span id="alertNumberText1"></span> is <span id="alertNumberText2"></span></p>
+        <button id="colorAlertButtonOkay">OKAY</button>
+        <button id="colorAlertButtonChange">Change</button>
+    </div>
+    <div class="randomNumbersAlert">
+      <p>Min number cannot be greater than max number.</p><span id="randomNumbersAlertBtn">X</span>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="formScripts/colorSettings0615.js"></script>
+  <script type="text/javascript" src="formScripts/wallSettings0615.js"></script>
+
+  <script type="text/javascript" src="gameScripts/setGame0615.js"></script>
+</html>
