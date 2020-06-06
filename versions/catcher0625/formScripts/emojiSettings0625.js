@@ -56,7 +56,7 @@ function setEmojiBlock(emojiBox,emoji) {
 function takeEmoji(emojiBox) {
   for (let clear of emojiBox.parentNode.children) {
     if (clear.getAttribute("name") == "selected") {
-      clear.setAttribute("name","unselected");
+      clear.setAttribute("name","nonselected");
       clear.classList.remove("selected");
     }
   }
