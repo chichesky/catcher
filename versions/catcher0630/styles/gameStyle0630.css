@@ -1,0 +1,91 @@
+main content div {
+  display: block;
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+main content div {
+  background-color: var(--bgColor);
+}
+
+main content .wall {
+  background-color: var(--wallColor);
+}
+
+main content .rival {
+  background-color: var(--rivalColor);
+}
+
+main content .enemy {
+  background-color: var(--enemyColor);
+}
+
+main content .target {
+  background-color: var(--targetColor);
+}
+
+main content .player {
+  background-color: var(--playerColor);
+}
+
+main content .wall::after {
+  position: relative;
+  top:-3px;
+  left:-1.5px;
+  font-size: 25px;
+  padding: 0;
+  margin:0;
+  content: var(--wallEmoji);
+}
+
+main content .rival::after {
+  position: relative;
+  top:-3px;
+  left:-1.5px;
+  font-size: 25px;
+  padding: 0;
+  margin:0;
+  content: var(--rivalEmoji);
+}
+
+main content .enemy::after {
+  position: relative;
+  top:-3px;
+  left:-1.5px;
+  font-size: 25px;
+  padding: 0;
+  margin:0;
+  content: var(--enemyEmoji);
+}
+
+main content .target::after {
+  position: relative;
+  top:-3px;
+  left:-1.5px;
+  font-size: 25px;
+  padding: 0;
+  margin:0;
+  content: var(--targetEmoji);
+}
+
+main content .player::after {
+  position: relative;
+  top:-3px;
+  left:-1.5px;
+  font-size: 25px;
+  padding: 0;
+  margin:0;
+  content: var(--playerEmoji);
+}
+/*
+  20*20
+  Toplam 400 kare
+*/
+
+/* maks 200 kare blok olabiliyor */
+/* RENKLER
+
+
+*/
